@@ -2,7 +2,7 @@ import { Container } from "@/components/globals/Container";
 import { CompanyContactInfo } from "@/components/globals/CompanyContactInfo";
 import { ContactForm } from "@/components/globals/ContactForm";
 
-const CONTACT_EMAIL_ENDPOINT = "http://localhost:3000/email";
+const CONTACT_EMAIL_ENDPOINT = `${import.meta.env.VITE_API_URL}/email`;
 
 export function Footer() {
   return (
