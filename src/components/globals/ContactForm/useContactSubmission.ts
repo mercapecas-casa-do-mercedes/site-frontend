@@ -24,6 +24,10 @@ export function useContactSubmission(endpoint: string) {
     }));
   };
 
+  const handlePhoneAccept = (value: string) => {
+    setFormData((prev) => ({ ...prev, phone: value }));
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (status === "loading") return;
@@ -45,6 +49,7 @@ export function useContactSubmission(endpoint: string) {
     formData,
     status,
     handleChange,
+    handlePhoneAccept,
     handleSubmit,
   };
 }

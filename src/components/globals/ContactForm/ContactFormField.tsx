@@ -1,4 +1,5 @@
 import React from "react";
+import { IMaskInput } from "react-imask";
 import { cn } from "@/lib/utils";
 
 export interface ContactFormFieldProps {
@@ -13,6 +14,8 @@ export interface ContactFormFieldProps {
   labelClassName?: string;
   required?: boolean;
   value?: string;
+  mask?: string;
+  onAccept?: (value: string) => void;
   onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   inputProps?: React.ComponentPropsWithoutRef<"input">;
   textareaProps?: React.ComponentPropsWithoutRef<"textarea">;
@@ -30,6 +33,8 @@ export function ContactFormField({
   labelClassName,
   required,
   value,
+  mask,
+  onAccept,
   onChange,
   inputProps,
   textareaProps,
@@ -56,6 +61,19 @@ export function ContactFormField({
           onChange={onChange}
           className={cn(commonFieldClass, "resize-none", inputClassName)}
           {...textareaProps}
+        />
+      ) : mask ? (
+        <IMaskInput
+          id={id}
+          name={name}
+          mask={mask}
+          type={type}
+          placeholder={placeholder}
+          required={required}
+          value={value}
+          onAccept={(val) => onAccept?.(val as string)}
+          className={cn(commonFieldClass, inputClassName)}
+          {...(inputProps as React.ComponentPropsWithoutRef<"input">)}
         />
       ) : (
         <input

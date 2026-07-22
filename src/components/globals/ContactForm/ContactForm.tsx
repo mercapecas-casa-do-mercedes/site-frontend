@@ -4,7 +4,7 @@ import type { ContactFormProps } from "./types";
 import { useContactSubmission } from "./useContactSubmission";
 
 export function ContactForm({ endpoint }: ContactFormProps) {
-  const { formData, status, handleChange, handleSubmit } = useContactSubmission(endpoint);
+  const { formData, status, handleChange, handlePhoneAccept, handleSubmit } = useContactSubmission(endpoint);
   const isLoading = status === "loading";
 
   return (
@@ -40,7 +40,8 @@ export function ContactForm({ endpoint }: ContactFormProps) {
             type="tel"
             required
             value={formData.phone}
-            onChange={handleChange}
+            mask="(00) 00000-0000"
+            onAccept={handlePhoneAccept}
           />
         </div>
         <ContactFormField
