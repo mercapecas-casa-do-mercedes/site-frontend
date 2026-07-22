@@ -31,12 +31,12 @@ export function Services() {
             <a
               key={label}
               /*        href="#" */
-              className="group flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-6 text-center shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[#E51515] hover:shadow-md"
+              className="group flex flex-col items-center gap-2 rounded-xl border border-border bg-card p-3 text-center shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[#E51515] hover:shadow-md xs:p-4 smm:p-4 sm:gap-3 sm:p-6"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#E51515]/10 transition-colors group-hover:bg-[#E51515]">
-                <Icon className="size-6 text-[#E51515] transition-colors group-hover:text-white" />
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#E51515]/10 transition-colors group-hover:bg-[#E51515] xs:h-9 xs:w-9 smm:h-10 smm:w-10 sm:h-12 sm:w-12">
+                <Icon className="size-4 text-[#E51515] transition-colors group-hover:text-white xs:size-[18px] smm:size-5 sm:size-6" />
               </div>
-              <span className="text-sm font-semibold text-foreground">{label}</span>
+              <span className="text-xs font-semibold text-foreground smm:text-[13px] sm:text-sm">{label}</span>
             </a>
           ))}
         </div>

@@ -71,15 +71,15 @@ export function NavigationModal({
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="flex min-h-24 flex-col items-center justify-center gap-2 rounded-md border border-border p-3 text-sm font-medium transition-colors hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+    className="flex min-h-14 flex-col items-center justify-center gap-1 rounded-md border border-border p-1.5 text-[10px] font-medium transition-colors hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-ring xs:min-h-16 xs:gap-1 xs:p-2 xs:text-[11px] smm:min-h-[72px] smm:gap-1.5 smm:p-2 smm:text-xs sm:min-h-24 sm:gap-2 sm:p-3 sm:text-sm"
   >
     <img
       src={iconSrc}
       alt=""
       aria-hidden="true"
-      className="size-8 object-contain"
+      className="size-5 object-contain xs:size-6 smm:size-6 sm:size-8"
     />
-    <span>{name}</span>
+    <span className="text-center">{name}</span>
   </a>
 ))}
         </div>

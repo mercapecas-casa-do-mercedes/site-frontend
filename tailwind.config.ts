@@ -10,6 +10,8 @@ const config: Config = {
        * Mobile-first approach (base classes are for mobile)
        * Utiliza os breakpoints padrão do Tailwind + extensões para futuros crescimentos
        * 
+       * - xs:  375px  (iPhone SE, iPhone X/11/12/13/14/15 (largura comum))
+       * - smm: 480px  (celulares maiores e em landscape)
        * - sm:  640px  (tablets, small devices)
        * - md:  768px  (tablets landscape, small desktops)
        * - lg:  1024px (desktops) — MAIS UTILIZADO NO PROJETO
@@ -17,6 +19,8 @@ const config: Config = {
        * - 2xl: 1536px (extra large) — reservado para expansão futura
        */
       screens: {
+        xs: '375px',
+        smm: '480px',
         sm: '640px',
         md: '768px',
         lg: '1024px',
