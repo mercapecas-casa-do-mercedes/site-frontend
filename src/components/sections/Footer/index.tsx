@@ -19,7 +19,7 @@ export function Footer() {
       <div className="border-t border-zinc-800 py-6">
         <Container>
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-zinc-500 sm:flex-row">
-            <span>Copyright © 2026 MercaPecas. Todos os direitos reservados.</span>
+            <span>Copyright © {new Date().getFullYear()} Mercapecas. Todos os direitos reservados.</span>
             <span>CNPJ: 02.761.265/0001-38</span>
           </div>
         </Container>
