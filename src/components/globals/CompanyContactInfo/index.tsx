@@ -52,7 +52,7 @@ export function CompanyContactInfo({
   address = "Av. Arlindo Massaro, 395 - Umuarama, Uberlândia - MG, 38402-076.",
   addressLink = "https://www.google.com/maps/dir/?api=1&destination=Av.+Arlindo+Massaro,+395,+Uberlândia,+MG,+38402-076",
   wazeLink = "https://www.waze.com/ul?q=Av.+Arlindo+Massaro+395+Uberlândia+MG&navigate=yes",
-  appleMapsLink = "https://maps.apple.com/?daddr=Av.+Arlindo+Massaro+395,+Uberlândia,+MG,+38402-076",  
+  appleMapsLink = "https://maps.apple.com/?daddr=Av.+Arlindo+Massaro+395,+Uberlândia,+MG,+38402-076",
   phone = "(34) 3213-9266",
   phoneRaw = "+553432139266",
   emailCotacoes = "vendas@mercapecas.com",
@@ -88,12 +88,12 @@ export function CompanyContactInfo({
           <li className="flex items-start gap-3 text-sm">
             <MapPin className="mt-0.5 size-4 shrink-0 text-[#E51515]" />
             <NavigationModal
-                address={address}
-                googleMapsLink={addressLink}
-                wazeLink={wazeLink}
-                appleMapsLink={appleMapsLink}
-/>
-        {/*     {addressLink ? (
+              address={address}
+              googleMapsLink={addressLink}
+              wazeLink={wazeLink}
+              appleMapsLink={appleMapsLink}
+            />
+            {/*     {addressLink ? (
               <a
                 href={addressLink}
                 target="_blank"
@@ -140,7 +140,7 @@ export function CompanyContactInfo({
               rel="noreferrer"
               className="text-zinc-400 transition-colors hover:text-white"
             >
-              Whatsapp: {whatsapp}
+              Atendimento Whatsapp: {whatsapp}
             </a>
           </li>
         )}
