@@ -70,10 +70,13 @@ export function ContactFormField({
           type={type}
           placeholder={placeholder}
           required={required}
-          value={value}
+          value={value ?? ""}
           onAccept={(val) => onAccept?.(val as string)}
           className={cn(commonFieldClass, inputClassName)}
-          {...(inputProps as React.ComponentPropsWithoutRef<"input">)}
+          {...(() => {
+            const { value: _v, ...rest } = (inputProps || {}) as any;
+            return rest;
+          })()}
         />
       ) : (
         <input
