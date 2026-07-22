@@ -52,7 +52,7 @@ export function CompanyContactInfo({
   address = "Av. Arlindo Massaro, 395 - Umuarama, Uberlândia - MG, 38402-076.",
   addressLink = "https://www.google.com/maps/dir/?api=1&destination=Av.+Arlindo+Massaro,+395,+Uberlândia,+MG,+38402-076",
   wazeLink = "https://www.waze.com/ul?q=Av.+Arlindo+Massaro+395+Uberlândia+MG&navigate=yes",
-  appleMapsLink = "https://maps.apple.com/?daddr=Av.+Arlindo+Massaro+395,+Uberlândia,+MG,+38402-076",
+  appleMapsLink = "https://maps.apple.com/?saddr=Current+Location&daddr=Av.+Arlindo+Massaro+395,+Uberlândia,+MG,+38402-076",
   phone = "(34) 3213-9266",
   phoneRaw = "+553432139266",
   emailCotacoes = "vendas@mercapecas.com",
@@ -93,18 +93,6 @@ export function CompanyContactInfo({
               wazeLink={wazeLink}
               appleMapsLink={appleMapsLink}
             />
-            {/*     {addressLink ? (
-              <a
-                href={addressLink}
-                target="_blank"
-                rel="noreferrer"
-                className="text-zinc-400 transition-colors hover:text-white"
-              >
-                {address}
-              </a>
-            ) : (
-              <span className="text-zinc-400">{address}</span>
-            )} */}
           </li>
         )}
         {phone && (
