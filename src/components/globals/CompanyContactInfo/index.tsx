@@ -1,6 +1,7 @@
 import { MapPin, Phone, Mail, Building2 } from "lucide-react";
 import { SocialMediaButton } from "@/components/globals/SocialMediaButton";
 import { NavigationModal } from "./localComponents/NavigationModal";
+import { openAppleMaps } from "./utils/openAppleMaps";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -42,7 +43,6 @@ export interface CompanyContactInfoProps {
   facebookUrl?: string;
   instagramUrl?: string;
   wazeLink?: string;
-  appleMapsLink?: string;
 }
 
 export function CompanyContactInfo({
@@ -52,7 +52,6 @@ export function CompanyContactInfo({
   address = "Av. Arlindo Massaro, 395 - Umuarama, Uberlândia - MG, 38402-076.",
   addressLink = "https://www.google.com/maps/dir/?api=1&destination=Av.+Arlindo+Massaro,+395,+Uberlândia,+MG,+38402-076",
   wazeLink = "https://www.waze.com/ul?q=Av.+Arlindo+Massaro+395+Uberlândia+MG&navigate=yes",
-  appleMapsLink = "https://maps.apple.com/?saddr=Current+Location&daddr=Av.+Arlindo+Massaro+395,+Uberlândia,+MG,+38402-076",
   phone = "(34) 3213-9266",
   phoneRaw = "+553432139266",
   emailCotacoes = "vendas@mercapecas.com",
@@ -91,7 +90,7 @@ export function CompanyContactInfo({
               address={address}
               googleMapsLink={addressLink}
               wazeLink={wazeLink}
-              appleMapsLink={appleMapsLink}
+              onAppleMapsClick={() => openAppleMaps(address)}
             />
           </li>
         )}
