@@ -5,8 +5,11 @@ import { Footer } from "@/components/sections/Footer";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
+import { useScrollToHash } from "./hooks/useScrollToHash";
 
 export function Home() {
+  useScrollToHash();
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />

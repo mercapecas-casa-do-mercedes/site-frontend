@@ -4,12 +4,13 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 import type { NavItem } from "@/interfaces/NavItem";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/components/theme-provider";
+import { Link } from "react-router-dom";
 
 const navItems: NavItem[] = [
-  { label: "Home", href: "#" },
-  { label: "Sobre nós", href: "#sobre" },
-  { label: "Produtos", href: "#produtos" },
-  { label: "Contato", href: "#contato" },
+  { label: "Home", href: "/" },
+  { label: "Sobre nós", href: "/#sobre" },
+  { label: "Produtos", href: "/#produtos" },
+  { label: "Contato", href: "/#contato" },
 ];
 
 export function Header() {
@@ -24,7 +25,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-md">
       <Container>
         <div className="flex h-20 items-center justify-between">
-          <a href="#" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img
               src={isDark ? "/assets/images/logo.png" : "/assets/images/logo-black.png"}
               alt="Mercapeças Casa do Mercedes"
@@ -36,17 +37,17 @@ export function Header() {
                 }
               }}
             />
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-1 md:flex">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className="rounded-md px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -58,12 +59,12 @@ export function Header() {
             >
               {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
             </button>
-            <a
-              href="#contato"
+            <Link
+              to="/#contato"
               className="rounded-sm bg-[#E51515] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#c41212]"
             >
               Fale Conosco
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
@@ -94,22 +95,22 @@ export function Header() {
         <Container>
           <nav className="flex flex-col gap-1 py-4">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 onClick={() => setOpen(false)}
                 className="rounded-md px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contato"
+            <Link
+              to="/#contato"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-sm bg-[#E51515] px-5 py-2.5 text-center text-sm font-semibold text-white"
             >
               Fale Conosco
-            </a>
+            </Link>
           </nav>
         </Container>
       </div>
