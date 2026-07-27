@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mercapecas.com.br/sitemap.xml

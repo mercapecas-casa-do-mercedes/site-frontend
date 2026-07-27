@@ -5,6 +5,7 @@ import { Footer } from "@/components/sections/Footer";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
+import { SEO } from "@/components/globals/SEO";
 import { useScrollToHash } from "./hooks/useScrollToHash";
 
 export function Home() {
@@ -12,6 +13,12 @@ export function Home() {
 
   return (
     <div className="flex min-h-screen flex-col">
+      <SEO
+        title="Mercapeças | Autopeças e Peças para Caminhões Mercedes-Benz - Linha Pesada"
+        description="Especialista em autopeças e peças para caminhões Mercedes-Benz da linha pesada na Mercapeças Casa do Mercedes. Qualidade, pronta entrega e atendimento especializado em Uberlândia e região."
+        canonicalUrl="https://mercapecas.com.br/"
+        ogImage="https://mercapecas.com.br/img01-01.webp"
+      />
       <Header />
       <main className="flex-1">
         <Hero />
@@ -24,3 +31,4 @@ export function Home() {
     </div>
   );
 }
+

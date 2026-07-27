@@ -1,11 +1,13 @@
 import { Container } from "@/components/globals/Container";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
+import { SEO } from "@/components/globals/SEO";
 import { ArrowLeft, SearchX } from "lucide-react";
 
 export function NotFound() {
     return (
         <div className="flex min-h-screen flex-col">
+            <SEO title="Página Não Encontrada | Mercapeças Casa do Mercedes" noIndex />
             <Header />
             <main className="flex-1">
                 <section className="relative flex items-center overflow-hidden py-24 md:py-32">
