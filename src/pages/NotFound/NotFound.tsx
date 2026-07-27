@@ -1,6 +1,7 @@
 import { Container } from "@/components/globals/Container";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
+import { Link } from "react-router-dom";
 import { ArrowLeft, SearchX } from "lucide-react";
 
 export function NotFound() {
