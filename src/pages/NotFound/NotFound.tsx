@@ -2,7 +2,7 @@ import { Container } from "@/components/globals/Container";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 import { SEO } from "@/components/globals/SEO";
-import { ArrowLeft, SearchX } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export function NotFound() {
     return (
