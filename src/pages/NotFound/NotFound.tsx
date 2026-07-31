@@ -16,10 +16,6 @@ export function NotFound() {
                     </div>
                     <Container>
                         <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
-                            <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-[#E51515]/10 text-[#E51515]">
-                                <SearchX className="h-9 w-9" />
-                            </div>
-
                             <p className="text-[8rem] font-extrabold leading-none tracking-tighter text-[#E51515] sm:text-[10rem]">
                                 404
                             </p>
