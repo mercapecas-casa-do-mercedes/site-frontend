@@ -2,6 +2,7 @@ import { MapPin, Phone, Mail, Building2 } from "lucide-react";
 import { SocialMediaButton } from "@/components/globals/SocialMediaButton";
 import { NavigationModal } from "./localComponents/NavigationModal";
 import { openAppleMaps } from "./utils/openAppleMaps";
+import { defaultWhatsappContacts, type WhatsAppContact } from "./constants/whatsappContacts";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -37,8 +38,7 @@ export interface CompanyContactInfoProps {
   phoneRaw?: string;
   emailCotacoes?: string;
   emailComercial?: string;
-  whatsapp?: string;
-  whatsappRaw?: string;
+  whatsappContacts?: WhatsAppContact[];
   cnpj?: string;
   facebookUrl?: string;
   instagramUrl?: string;
@@ -56,8 +56,7 @@ export function CompanyContactInfo({
   phoneRaw = "+553432139266",
   emailCotacoes = "vendas@mercapecas.com",
   emailComercial = "mercapecas@mercapecas.com",
-  whatsapp = "(34) 3213-9266",
-  whatsappRaw = "553432139266",
+  whatsappContacts = defaultWhatsappContacts,
   cnpj = "02.761.265/0001-38",
   facebookUrl = "https://www.facebook.com/mercapecasltda/",
   instagramUrl = "https://www.instagram.com/mercapecas_mercedes/",
@@ -118,19 +117,19 @@ export function CompanyContactInfo({
             </a>
           </li>
         )}
-        {whatsapp && (
-          <li className="flex items-center gap-3 text-sm">
+        {whatsappContacts && whatsappContacts.map((contact) => (
+          <li key={contact.label} className="flex items-center gap-3 text-sm">
             <WhatsAppIcon className="size-4 shrink-0 text-[#E51515]" />
             <a
-              href={`https://api.whatsapp.com/send?phone=${whatsappRaw}`}
+              href={`https://api.whatsapp.com/send?phone=${contact.phoneRaw}`}
               target="_blank"
               rel="noreferrer"
               className="text-zinc-400 transition-colors hover:text-white"
             >
-              Atendimento Whatsapp: {whatsapp}
+              {contact.label} Whatsapp: {contact.phone}
             </a>
           </li>
-        )}
+        ))}
         {cnpj && (
           <li className="flex items-center gap-3 text-sm">
             <Building2 className="size-4 shrink-0 text-[#E51515]" />
@@ -157,9 +156,9 @@ export function CompanyContactInfo({
             hoverBgClass="hover:bg-[#E1306C]"
           />
         )}
-        {whatsapp && (
+        {whatsappContacts && whatsappContacts.length > 0 && (
           <SocialMediaButton
-            href={`https://api.whatsapp.com/send?phone=${whatsappRaw}`}
+            href={`https://api.whatsapp.com/send?phone=${whatsappContacts[0].phoneRaw}`}
             ariaLabel="WhatsApp"
             icon={<WhatsAppIcon className="size-4 transition-colors" />}
             hoverBgClass="hover:bg-[#25D366]"
