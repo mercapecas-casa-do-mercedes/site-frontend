@@ -1,4 +1,4 @@
-import type { ContactFormData, ContactFormPayload } from "./types";
+import type { ContactFormData, ContactFormPayload } from "../types";
 
 export function buildContactEmailPayload(data: ContactFormData): ContactFormPayload {
   return {

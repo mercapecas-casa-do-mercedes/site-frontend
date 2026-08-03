@@ -1,7 +1,7 @@
-import { ContactFormField } from "./ContactFormField";
-import { ContactFormSubmitButton } from "./ContactFormSubmitButton";
+import { ContactFormField } from "./components/ContactFormField";
+import { ContactFormSubmitButton } from "./components/ContactFormSubmitButton";
 import type { ContactFormProps } from "./types";
-import { useContactSubmission } from "./useContactSubmission";
+import { useContactSubmission } from "./hooks/useContactSubmission";
 
 export function ContactForm({ endpoint }: ContactFormProps) {
   const { formData, status, handleChange, handlePhoneAccept, handleSubmit } = useContactSubmission(endpoint);

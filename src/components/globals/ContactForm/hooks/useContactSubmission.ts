@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import type { ContactFormData } from "./types";
-import { buildContactEmailPayload } from "./buildContactEmailPayload";
-import { sendContactEmail } from "./sendContactEmail";
+import type { ContactFormData } from "../types";
+import { buildContactEmailPayload } from "../services/buildContactEmailPayload";
+import { sendContactEmail } from "../services/sendContactEmail";
 
 export type SubmissionStatus = "idle" | "loading" | "success" | "error";
 

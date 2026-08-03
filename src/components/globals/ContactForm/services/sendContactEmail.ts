@@ -1,4 +1,4 @@
-import type { ContactFormPayload } from "./types";
+import type { ContactFormPayload } from "../types";
 
 export async function sendContactEmail(endpoint: string, payload: ContactFormPayload): Promise<void> {
   const response = await fetch(endpoint, {
