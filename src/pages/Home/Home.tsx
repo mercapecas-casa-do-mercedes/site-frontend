@@ -14,8 +14,8 @@ export function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <SEO
-        title="Mercapeças | Autopeças e Peças para Caminhões Mercedes-Benz - Linha Pesada"
-        description="Especialista em autopeças e peças para caminhões Mercedes-Benz da linha pesada na Mercapeças Casa do Mercedes. Qualidade, pronta entrega e atendimento especializado em Uberlândia e região."
+        title="Mercapeças | Peças para Caminhões Mercedes-Benz - Linha Pesada"
+        description="Especialista em peças para caminhões Mercedes-Benz da linha pesada na Mercapeças Casa do Mercedes. Qualidade, pronta entrega e atendimento especializado em Uberlândia e região."
         canonicalUrl="https://mercapecas.com.br/"
         ogImage="https://mercapecas.com.br/img01-01.webp"
       />

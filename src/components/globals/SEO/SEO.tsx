@@ -11,9 +11,9 @@ export interface SEOProps {
 }
 
 const DEFAULT_TITLE =
-  "Mercapeças | Autopeças e Peças para Caminhões Mercedes-Benz - Linha Pesada";
+  "Mercapeças | Peças para Caminhões Mercedes-Benz - Linha Pesada";
 const DEFAULT_DESCRIPTION =
-  "Especialista em autopeças e peças para caminhões Mercedes-Benz da linha pesada na Mercapeças Casa do Mercedes. Qualidade, pronta entrega e atendimento especializado em Uberlândia e região.";
+  "Especialista em peças para caminhões Mercedes-Benz da linha pesada na Mercapeças Casa do Mercedes. Qualidade, pronta entrega e atendimento especializado em Uberlândia e região.";
 const DEFAULT_CANONICAL = "https://mercapecas.com.br/";
 const DEFAULT_OG_IMAGE = "https://mercapecas.com.br/img01-01.webp";
 
@@ -27,7 +27,7 @@ const defaultSchema = {
   logo: "https://mercapecas.com.br/assets/images/logo-mercapecas.png",
   image: "https://mercapecas.com.br/img01-01.webp",
   description:
-    "Especialista em autopeças e peças para caminhões Mercedes-Benz da linha pesada na Mercapeças Casa do Mercedes. Qualidade, pronta entrega e atendimento especializado.",
+    "Especialista em peças para caminhões Mercedes-Benz da linha pesada na Mercapeças Casa do Mercedes. Qualidade, pronta entrega e atendimento especializado.",
   telephone: "+553432139266",
   priceRange: "$$",
   address: {

@@ -1,6 +1,6 @@
 # Mercapeças Casa do Mercedes
 
-Este projeto é um website institucional e catálogo de autopeças especializado em veículos Mercedes-Benz. Ele foi desenvolvido com foco em alta performance, interfaces modernas e limpas, e uma arquitetura escalável e de fácil manutenção baseada em React, TypeScript e Vite.
+Este projeto é um website institucional e catálogo de peças para caminhões Mercedes-Benz linha pesada. Ele foi desenvolvido com foco em alta performance, interfaces modernas e limpas, e uma arquitetura escalável e de fácil manutenção baseada em React, TypeScript e Vite.
 
 ---
 
