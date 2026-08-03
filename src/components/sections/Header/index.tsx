@@ -88,8 +88,8 @@ export function Header() {
 
       <div
         className={cn(
-          "overflow-hidden transition-all duration-300 md:hidden",
-          open ? "max-h-96 border-t border-border" : "max-h-0"
+          "absolute top-full left-0 w-full overflow-hidden bg-background/95 backdrop-blur-md transition-all duration-300 md:hidden",
+          open ? "max-h-96 border-b border-border" : "max-h-0"
         )}
       >
         <Container>
